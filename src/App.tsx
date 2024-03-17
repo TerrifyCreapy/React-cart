@@ -6,7 +6,6 @@ import routes from "routes/routes";
 import mapRoutes from "utils/mapRoutes";
 
 const App: FC = () => {
-  alert("working")
   return <Routes>{mapRoutes(routes)}</Routes>;
 };
 

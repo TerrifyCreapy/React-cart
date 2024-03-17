@@ -11,6 +11,7 @@ import ICartProduct from "interfaces/entities/CartProduct";
 import Product from "components/Product";
 
 import styles from "./Cart.module.scss";
+import EmptyCart from "components/EmptyCart";
 
 type CartProps = {
   products: ICartProduct[];
@@ -43,7 +44,7 @@ const Cart: FC<CartProps> = ({ products, getTotalPrice, update }) => {
           style={{ display: "flex", flexDirection: "column", gap: 30 }}
           autoSpaced
         >
-          {items}
+          {items?.length ? items : <EmptyCart />}
         </SplitCol>
         {viewWidth.tabletPlus && (
           <SplitCol
@@ -64,7 +65,7 @@ const Cart: FC<CartProps> = ({ products, getTotalPrice, update }) => {
             height: "100%",
             textAlign: "center",
             padding: "10px 5px",
-            marginTop: 10
+            marginTop: 10,
           }}
         >
           <TotalPrice value={getTotalPrice()} />

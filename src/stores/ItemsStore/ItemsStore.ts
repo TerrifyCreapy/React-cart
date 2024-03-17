@@ -37,6 +37,14 @@ class ItemsStore {
     this.calculateTotalPrice();
   }
 
+  removeItems(id: number) {
+    const newItems = this.items.filter((e: ICartProduct) => {
+      return e.id !== id;
+    });
+    this.items = newItems;
+    this.calculateTotalPrice();
+  }
+
   setLoading(value: boolean) {
     this.isLoading = value;
   }
