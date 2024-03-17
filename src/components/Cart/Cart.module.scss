@@ -1,0 +1,12 @@
+.products__container {
+    justify-content: center;
+    max-width: 960px;
+    margin: 0 auto;
+    gap: 40px;
+    position: relative;
+
+    .right__column {
+        position: sticky;
+        top: 20px;
+    }
+}

@@ -1,0 +1,14 @@
+.__container {
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+
+    .__btn {
+        background-color: transparent !important;
+        color: white !important;
+
+        @media (prefers-color-scheme: light) {
+            color: black !important;
+        }
+    }
+}
